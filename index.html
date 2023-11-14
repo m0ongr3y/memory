@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Memory / Accueil </title>
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+<body>
+
+<header>  
+
+
+
+    <ul id="home-menu" class = "home-menu">
+        <li id="home-target" class ="home-menu-detail"><a href="index.html"> Accueil </a></li>
+        <li id="signin-target" class ="home-menu-detail"><a href="signin.html"> S'inscrire </a></li>
+        <li id="login-target" class ="home-menu-detail"><a href="login.html"> Se connecter </a></li>
+        <li id="profile-target"class ="home-menu-detail"><a href="profile.html"> Profil </a></li>
+        <li id="game-target" class ="home-menu-detail"><a href="game.html"> Jouer </a></li>
+    </ul>
+
+
+</header>
+  <main id="home-main-holder">
+    <h1 id="home-header"> ENI - MEMORY - Accueil </h1>
+        
+    <div id="global-presentation">
+
+    <p>Bienvenue sur le site du Memory de l'ENI. <br>
+        Venez Jouer avec nous et faire le meilleur score possible.</p>
+
+ </div>
+
+<div>
+      <h2 id='home-title-rules'> Voici les règles du jeu : </h2>
+
+
+      <section>
+        <nav>
+            <ul>
+                <li id="rule1">Retournez deux cartes. Si les images sont identiques, le jeu laisse les cartes visibles.</li>
+                <li id="rule2">Si les images sont différentes, les cartes se retournent faces cachées là où elles étaient.</li>
+                <li id="rule3">La partie est terminée lorsque toutes les cartes ont été assemblées par paires</li>
+            </ul>
+            ><img id="memo-example" class ="imgSize" src="./media/images/memory-legume/memory_detail.png" class ="image" alt="Présentation du jeu mémory">
+        </nav>
+      </section>
+   
+    </div>
+
+    <div>
+    <p>Si vous voulez vous souvenir de votre score, inscrivez-vous via le formulaire.</p> 
+    <p>Le jeu garde les 5 meilleurs scores.</p> 
+    <p> Si vous voulez relancer une partie, cliquez sur la barre espace.</p>
+  </div>
+  </main>
+   <script type="module" src="./modules/events/game.js"></script>
+</body>
+</html>
