@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory / S'inscrire</title>
+   <link rel="stylesheet" href="./styles/style.css">
+  </head>
+
+  <body>
+    <header>
+     
+        <ul id="home-menu" class="home-menu">
+          <li id="home-target" class="home-menu-detail">
+            <a href="index.html"> Accueil </a>
+          </li>
+          <li id="signin-target" class="home-menu-detail">
+            <a href="signin.html"> S'inscrire </a>
+          </li>
+          <li id="login-target" class="home-menu-detail">
+            <a href="login.html"> Se connecter </a>
+          </li>
+          <li id="profile-target" class="home-menu-detail">
+            <a href="profile.html"> Profil </a>
+          </li>
+          <li id="game-target" class="home-menu-detail">
+            <a href="game.html"> Jouer </a>
+          </li>
+        </ul>
+     
+    </header>
+
+    <main id="main-holder-login">
+     <h1 id="login-header"> ENI - MEMORY - Inscription </h1>
+
+<fieldset>  <legend> Inscris-toi </legend> <br />
+
+      <form id="singin-form" class="signin-form" method="post">
+      
+       
+        <label for="username-field"> Nom d'utilisateur </label>
+        <input
+          type="text"
+          name="username"
+          id="username-field"
+          class="signin-form-field"
+          placeholder="Nom d'utilisateur"
+        />
+        <br />
+
+        <label for="password-field"> Adresse mail </label>
+        <input
+          type="password"
+          name="password"
+          id="password-field"
+          class="signin-form-field"
+          placeholder="example@domaine.com"
+        />
+        <br />
+
+        <label for="password-field"> Mot de passe </label>
+        <input
+          type="password"
+          name="password"
+          id="password-field"
+          class="signin-form-field"
+          placeholder="Entrez le mot de passe"
+        />
+        <label for="password-field">
+          6 caractères minimum, incluant min un chiffre et un symbole
+        </label>
+        <br />
+        <label for="password-confirm"> Confirmez le mot de passe </label>
+        <input
+          type="password-confirm"
+          name="password-confirm"
+          id="password-confirm"
+          class="signin-form-field"
+          placeholder="Confirmez le mdp"
+        />
+        <br />
+
+        <button type="submit" value="Signin" id="signin-form-submit">
+          S'inscrire
+        </button>
+      </form>
+      </fieldset>
+    </main>
+  </body>
+</html>
