@@ -51,8 +51,6 @@ header {
   cursor: pointer;
 }
 
-
-
 #board{
   margin: 48px auto;
     width: 40vw;
@@ -62,3 +60,8 @@ header {
     box-sizing: border-box;
     justify-content: flex-end;
 }
+
+.blur {
+  flex-grow: 1;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);}

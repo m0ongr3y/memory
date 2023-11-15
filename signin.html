@@ -46,38 +46,49 @@
           class="signin-form-field"
           placeholder="Nom d'utilisateur"
         />
-        <br />
+        <br/>
 
-        <label for="password-field"> Adresse mail </label>
+        <label for="email-field"> Adresse mail </label>
         <input
-          type="password"
-          name="password"
-          id="password-field"
+          type="email"
+          name="email"
+          id="email-field"
           class="signin-form-field"
           placeholder="example@domaine.com"
+          autocomplete = "email"
         />
-        <br />
+        <br/>
 
-        <label for="password-field"> Mot de passe </label>
+        <label for="passwordInput"> Mot de passe </label>
         <input
           type="password"
           name="password"
-          id="password-field"
+          id="passwordInput"
           class="signin-form-field"
           placeholder="Entrez le mot de passe"
+         
         />
-        <label for="password-field">
+<div id="figureAlert" class="alert"></div>
+<div id="specialCharAlert" class="alert"></div>
+<div id="charCountAlert" class="alert"></div>
+        
+        <label for="passwordConfirmInput">
           6 caractères minimum, incluant min un chiffre et un symbole
         </label>
         <br />
         <label for="password-confirm"> Confirmez le mot de passe </label>
         <input
-          type="password-confirm"
+          type="password"
           name="password-confirm"
-          id="password-confirm"
+          id="passwordConfirmInput"
           class="signin-form-field"
           placeholder="Confirmez le mdp"
+         
         />
+    
+<div id="figureAlertConfirm" class="alert"></div>
+<div id="specialCharAlertConfirm" class="alert"></div>
+<div id="charCountAlertConfirm" class="alert"></div>
         <br />
 
         <button type="submit" value="Signin" id="signin-form-submit">
@@ -86,5 +97,6 @@
       </form>
       </fieldset>
     </main>
+     <script type="module" src="./modules/forms.js"></script>
   </body>
 </html>
