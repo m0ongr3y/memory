@@ -1,6 +1,6 @@
 const cardsContainer = document.getElementById("board");
-const imagesFolder = "./media/images/animaux/";    // variable = String of the image path 
-const imageFormat = ".webp";    // variable = String of the image extension 
+const imagesFolder = "./media/images/animauxdomestiques/";    // variable = String of the image path 
+const imageFormat = ".jpg";    // variable = String of the image extension 
 const backImage = `${imagesFolder}back.png`;  // variable = String of the image path for back.png
 const gridSize = 4; // 1st grid size fix
 const totalPairs = 6; // quantity of unique images
@@ -14,9 +14,10 @@ const cardCount = imagesPicklist.length;  //  getting a full set of cards for a 
 
 let revealedCount = 0;
 let activeCard = null;    // assign the activeCard variable to be able to follow the game flow
-let awaitingEndOfMove = false;  
+let awaitingEndOfMove = false;
+let moveCount = 0;
 
-
+// function to deal the cards as hidden
 
 function buildCard(imageSrc) {
     const cardElement = document.createElement("div");
@@ -33,6 +34,8 @@ function buildCard(imageSrc) {
 
     cardElement.appendChild(image);
 
+    // function to play compare 2 cards on a click with the previously added date-revealed attribute
+
     cardElement.addEventListener("click", () => {
         const revealed = cardElement.getAttribute("data-revealed");
 
@@ -40,11 +43,13 @@ function buildCard(imageSrc) {
             return;
         }
 
-        image.src = imageSrc; // showingg the card
+        image.src = imageSrc; //  display the card face up
         if (!activeCard) {
-            activeCard = cardElement;
+            activeCard = cardElement;  //sets the clicked card as the active one and then waits for the next click to compare cards.
+            moveCount += 1;
             return;
         }
+        document.getElementById("moveCountDisplay").innerText = moveCount;
 
         const imageToMatch = activeCard.getAttribute("data-image");
 
@@ -55,15 +60,16 @@ function buildCard(imageSrc) {
             activeCard = null;
             awaitingEndOfMove = false;
             revealedCount += 2;
+            document.getElementById("revealedCountDisplay").innerText = revealedCount/2;
 
             if (revealedCount === cardCount) {
                 alert("Tu as gagné, appuie sur espace pour relancer une partie!");
             }
-
             return;
         }
-
+     
         awaitingEndOfMove = true;
+     
 
         setTimeout(() => {
             image.src = backImage;
@@ -108,23 +114,23 @@ cardsContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 
 
 document.addEventListener('keydown', function (event) {
-    if (event.code === 'Space') { 
+    if (event.code === 'Space') {
         restartGame();
     }
 });
 
 
 function restartGame() {
-     revealedCount = 0;   // reset the card count
+    revealedCount = 0;   // reset the card count
     cardsContainer.innerHTML = '';   // empty the div that was occupied by the board
 
     activeCard = null;   // set card variables to the iniitial state
     awaitingEndOfMove = false;  // set card variables to the iniitial state
 
-    
+
     shuffle(imagesPicklist);  // shuffle images
 
-    
+
     for (let i = 0; i < cardCount; i++) {   // deal the cards from scratch
         const image = imagesPicklist[i];
         const card = buildCard(image);

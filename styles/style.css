@@ -20,6 +20,30 @@ header {
   padding: 10px;
 }
 
+form {
+  justify-content: left;
+  padding: 5px;
+  margin: 2em 3em 5em 3em;
+  line-height: 2em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+label {
+  display: inline-block;
+  text-align: right;
+}
+
+input {
+  display: inline-block;
+  padding: 1em;
+  min-width: 50vw;
+  min-height: 1vh;
+  font-family: inherit;
+  font-size: 1em;
+  margin: 5px 0px 0px 2px;
+}
+
 .imgSize {
   display: inline;
   margin-right: 10px;
@@ -51,17 +75,26 @@ header {
   cursor: pointer;
 }
 
-#board{
+#board {
   margin: 48px auto;
-    width: 40vw;
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 10px;
-    box-sizing: border-box;
-    justify-content: flex-end;
+  width: 40vw;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+  box-sizing: border-box;
+  justify-content: flex-end;
 }
 
 .blur {
   flex-grow: 1;
   filter: blur(8px);
-  -webkit-filter: blur(8px);}
+  -webkit-filter: blur(8px);
+}
+
+.error-messages {
+  color: rgb(238, 91, 159);
+  font-family: "Courier New", Courier, monospace, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.1em;
+}

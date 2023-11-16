@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory / Se connecter </title>
+     <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+    <header>
+   
+        <ul id="home-menu" class="home-menu">
+          <li id="home-target" class="home-menu-detail">
+            <a href="index.html"> Accueil </a>
+          </li>
+          <li id="signin-target" class="home-menu-detail">
+            <a href="signin.html"> S'inscrire </a>
+          </li>
+          <li id="login-target" class="home-menu-detail">
+            <a href="login.html"> Se connecter </a>
+          </li>
+          <li id="profile-target" class="home-menu-detail">
+            <a href="profile.html"> Profil </a>
+          </li>
+          <li id="game-target" class="home-menu-detail">
+            <a href="game.html"> Jouer </a>
+          </li>
+        </ul>
+     
+    </header>
+
+
+    <main id="main-holder">
+      <h1 id="login-header"> ENI - MEMORY - Connexion  </h1>
+<fieldset> <legend> Veuillez saisir les données demandées </legend>
+      <form id="login-form" class="login-form" method="post">
+        <input
+          type="text"
+          name="username"
+          id="username-field"
+          class="login-form-field"
+          placeholder="Username"
+        />
+        <input
+          type="password"
+          name="password"
+          id="password-field"
+          class="login-form-field"
+          placeholder="Password"
+        />
+        <button type="submit" value="Login" id="login-form-submit"></button>
+      </form>
+      </fieldset>
+    </main>
+  </body>
+</html>
