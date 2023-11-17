@@ -65,11 +65,10 @@
             class="signin-form-field"
             placeholder="Entrez le mot de passe"
           />
-         
 
-          <label for="passwordConfirmInput">
-            6 caractères minimum, incluant min un chiffre et un symbole
-          </label>
+          <p id ="pswd-requirements">
+            6 caractères minimum, incluant min un chiffre et un symbole parmi $&+,:;=?@#|'<>.^*()%!-
+          <P>
           <br />
           <label for="passwordConfirmInput"> Confirmez le mot de passe </label>
           <input
@@ -80,7 +79,7 @@
             placeholder="Confirmez le mdp"
           />
           <br />
-       <div id="errorMessages" class="error-messages"></div>
+          <div id="errorMessages" class="error-messages"></div>
           <button type="submit" value="Signin" id="signin-form-submit">
             S'inscrire
           </button>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -32,18 +31,38 @@
     </header>
     <main>   <h1 id="game-header"> ENI - MEMORY - Profil </h1>
     
-    <div> <h2 id="game-title"> Ta ganache et tes préférences </h1>
+    <div> <h2 id="game-title"> Ta photo et tes préférences de jeu </h1>
         
-        <div> 
+        <div class="profile-section">
+    <div class="profile-container">
+        <img id="preview-image" class="profile" src="" alt="Ta photo de profil">
+        <input type="file" id="profile-picture" accept="image/*">
+       
               </div>
+               </div>
 
 
 <div>
+ <p> Choisis le thème du jeu </p> 
          <select name="change-theme" id="change-theme">
         <option disabled selected value="">--Choix thème--</option>
-        <option value="dinos1">Dinosaures</option>
-        <option value="veggies">Légumes</option>
-        <option value="dogs">Chiens </option>
+        <option value="dinos1">Animaux domestiques</option>
+        <option value="veggies"> Animaux sauvages </option>
+        <option value="dogs">Légumes </option>
+    </select> <br>
+
+    <img src="" alt="">
+
+   </div>
+
+   <div>
+
+   <p> Choisis la taille du jeu </p> 
+         <select name="size-theme" id="size-theme">
+        <option disabled selected value="">--Choix taille--</option>
+        <option value="size4x3"> 4x3</option>
+        <option value="size4x4"> 4x4</option>
+        <option value="size4x5"> 4x5 </option>
     </select> <br>
 
     <img src="" alt="">
